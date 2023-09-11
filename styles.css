@@ -12,6 +12,15 @@ html {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
+h1 {
+  width: 90vh;
+  height: 350px;
+
+  color: blanchedalmond;
+  font-size: 5rem;
+  text-align: start;
+}
+
 .container {
   display: flex;
   justify-content: end;
@@ -26,36 +35,141 @@ html {
 
 img {
   width: 80px;
-  height: 500px;
-
+  height: 400px;
   object-fit: cover;
   border-radius: 100px;
-
   margin-right: 24px;
+  transition: 1;
 }
 
-/*Principal Desktop Card*/
-
-.card-container-principal {
-  background-color: red;
+img:hover {
+  cursor: pointer;
+  opacity: 0.8;
 }
 
-.card-container-principal img {
-  position: absolute;
-  top: 40px;
-  left: 50px;
-
-  width: 750px;
-
-  border-radius: 40px;
-}
 .cards-info {
-  position: absolute;
-  top: 460px;
-  left: 80px;
-
-  width: 450px;
-
-  border-radius: 40px;
   font-size: x-large;
+  margin-right: 20px;
+  text-align: center;
+  color: blanchedalmond;
+}
+
+.active {
+  width: 750px;
+  transition: 1.7s ease-out;
+}
+
+.inactive {
+  transition: 1.7s ease-out;
+  opacity: 0.3;
+  margin-right: 48px;
+}
+
+/*Responsive*/
+@media (min-width: 1440px) {
+  .container {
+    width: 90%;
+
+    margin-top: 50px;
+
+    background-color: blue;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    background-color: red;
+    margin-left: 50px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 95%;
+    display: flex;
+    align-items: end;
+    background-color: pink;
+  }
+
+  h1 {
+    height: 400px;
+    font-size: 5rem;
+    text-align: start;
+    margin-right: 28px;
+  }
+
+  img {
+    width: 50px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 100px;
+  }
+
+  img:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+
+  .cards-info {
+    margin-bottom: 0px;
+    height: 50px;
+    font-size: x-large;
+    text-align: center;
+    color: blanchedalmond;
+  }
+
+  .active {
+    width: 300px;
+    transition: 1.7s ease-out;
+  }
+
+  .inactive {
+    transition: 1.7s ease-out;
+    opacity: 0.3;
+    margin-right: 48px;
+  }
+}
+
+@media (max-width: 320px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 180vh;
+    align-items: center;
+    background-color: blueviolet;
+  }
+
+  h1 {
+    width: 180px;
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  img {
+    width: 80px;
+    height: 80px;
+    margin-top: 8px;
+    margin-left: 24px;
+    object-fit: cover;
+    border-radius: 100px;
+  }
+
+  img:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+
+  .cards-info {
+    height: 50px;
+    font-size: x-large;
+    text-align: center;
+    color: blanchedalmond;
+    margin-left: 16px;
+  }
+
+  .active {
+    width: 230px;
+    transition: 1.7s ease-out;
+  }
 }
