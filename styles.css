@@ -71,8 +71,12 @@ img:hover {
     background-color: pink;
   }
 
+  .container {
+    height: 100%;
+  }
+
   h1 {
-    width: 50vh;
+    width: 40%;
     height: 350px;
 
     color: blanchedalmond;
